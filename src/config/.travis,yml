@@ -1,0 +1,29 @@
+language:   node_js
+cache_
+    directories:
+        -node_modules
+        -~/.npm
+node_js:
+    -   '12'
+git:
+    depth:  3
+
+script:
+    - yarn test
+
+notifications:
+    slack: platzicitravis:DDPm3uxQE9V9d0kouAOtp9UV
+    email: 
+        recipients:
+      - sidota1292@ergowiki.com
+    on_sucess:  always
+    on_failure: always
+
+deploy:
+    provide:    heroku
+    skip-cleanup:   true
+    keep-history:   true
+    api_key:    596eb934-2f92-4879-ace9-7842df5933ee
+    app:    platzi-store-test-backend
+    on:
+        repo:   judaz100/platzi-store-backend
