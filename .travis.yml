@@ -25,5 +25,5 @@ deploy:
     keep-history:   true
     api_key:    596eb934-2f92-4879-ace9-7842df5933ee
     app:    platzi-store-test-backend
-    on:
+        on:
         repo:   judaz100/platzi-store-backend
